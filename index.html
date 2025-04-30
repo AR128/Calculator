@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="calculator">
+        <button class="btn info" onclick="toggleInfo()">
+            <i class="fa-solid fa-circle-info"></i>
+        </button>
+        <input type="text" id="display" disabled />
+        <div id="buttons">
+            <button class="btn" onclick="clearDisplay()">
+                <i class="fa-solid fa-c"></i>
+            </button>
+            <button onclick="appendToDisplay('(')"><b>(</b></button>
+            <button onclick="appendToDisplay(')')"><b>)</b></button>
+            <button class="btn history" onclick="toggleHistory()">
+                <i class="fa-solid fa-h"></i>
+            </button>
+            <button class="btn operator" onclick="appendToDisplay('/')">
+                <i class="fa-solid fa-divide"></i>
+            </button>
+            <button class="btn" onclick="appendToDisplay('7')">
+                <i class="fa-solid fa-7"></i>
+            </button>
+            <button class="btn" onclick="appendToDisplay('8')">
+                <i class="fa-solid fa-8"></i>
+            </button>
+            <button class="btn" onclick="appendToDisplay('9')">
+                <i class="fa-solid fa-9"></i>
+            </button>
+            <button class="btn operator" onclick="appendToDisplay('*')">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button class="btn" onclick="appendToDisplay('4')">
+                <i class="fa-solid fa-4"></i>
+            </button>
+            <button class="btn" onclick="appendToDisplay('5')">
+                <i class="fa-solid fa-5"></i>   
+            </button>
+            <button class="btn" onclick="appendToDisplay('6')">
+                <i class="fa-solid fa-6"></i>
+            </button>
+            <button class="btn operator" onclick="appendToDisplay('-')">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+            <button class="btn" onclick="appendToDisplay('1')">
+                <i class="fa-solid fa-1"></i>
+            </button>
+            <button class="btn" onclick="appendToDisplay('2')">
+                <i class="fa-solid fa-2"></i>
+            </button>
+            <button class="btn" onclick="appendToDisplay('3')">
+                <i class="fa-solid fa-3"></i>
+            </button>
+            <button class="btn operator" onclick="appendToDisplay('+')">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <button class="btn" onclick="appendToDisplay('0')">
+                <i class="fa-solid fa-0"></i>
+            </button>
+            <button class="btn equals" onclick="calculateResult()">
+                <i class="fa-solid fa-equals"></i>
+            </button>
+        </div>
+        <div id="historyModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleHistory()">&times;</span>
+                <h2>Calculation History</h2>
+                <div id="emptyHistoryMessage" style="display: none; text-align: center; font-size: 18px; color: #888;">
+                    No history available. Perform some calculations to see the history here.
+                </div>
+                <ul id="historyList"></ul>
+            </div>
+        </div>
+        <div id="infoModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleInfo()">&times;</span>
+                <h2>Calculator Information</h2>
+                <p>Welcome to the Calculator! This calculator allows you to perform basic arithmetic operations with ease. Here’s what you can do:</p>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li>
+                        <i class="fa-solid fa-plus-circle"></i> <strong>Addition:</strong> Use the <strong>+</strong> button to add numbers.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-minus-circle"></i> <strong>Subtraction:</strong> Use the <strong>-</strong> button to subtract numbers.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-xmark-circle"></i> <strong>Multiplication:</strong> Use the <strong>*</strong> button to multiply numbers.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-divide"></i> <strong>Division:</strong> Use the <strong>/</strong> button to divide numbers.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-history"></i> <strong>History:</strong> Click on the <strong>History</strong> button to view your previous calculations.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-info"></i> <strong>Information:</strong> Click on the <strong>Info</strong> button to see this information.
+                    </li>
+                </ul>
+                <p>Enjoy using the Stylish Calculator for all your arithmetic needs!</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
