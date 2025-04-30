@@ -1,7 +1,7 @@
 # Calculator
 Welcome to the basic calculator web page!
 
-You can try out the calculator at: [[calc-1701.netlify.app](https://calc-1701.netlify.app)
+You can try out the calculator at: [calc-1701.netlify.app](https://calc-1701.netlify.app)
 
 # Features
 Simple and user-friendly interface
